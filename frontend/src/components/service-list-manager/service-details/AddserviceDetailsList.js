@@ -13,8 +13,21 @@ export default function AddserviceDetailsList() {
     const [Services, setService] = useState("");
     
    async function submitData(e) {
+       e.preventDefault();
         setLoading(true);  
         try{
+            if (!Services || !Mileage) {
+                SoloAlert.alert({
+                    title: "Oops!",
+                    body: "Please fill all fields",
+                    icon: "warning",
+                    theme: "dark",
+                    useTransparency: true,
+                    onOk: function () {
+
+                    },
+                });
+            }else{
             console.log(Services)
             const newDetails = {
                 Mileage,
@@ -44,6 +57,7 @@ export default function AddserviceDetailsList() {
                     },
                   });
             }
+        }
         }catch(err){
 
         }
@@ -93,7 +107,7 @@ export default function AddserviceDetailsList() {
                 </div>
                 <div class="col-12" id="btngrp">
                     <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{clear()}}><i class="fa fa-ban"></i> Close</button>&nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-primary" onClick={(e) => { submitData() }}
+                    <button type="submit" class="btn btn-primary" onClick={(e) => { submitData(e) }}
                         disabled={isLoading} ><i class="fa fa-file-export"></i>  {isLoading ? 'Sending..' : 'Submit form'}</button>
                 </div>
             </form>

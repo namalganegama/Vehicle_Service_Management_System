@@ -1,7 +1,7 @@
 /* Style the sidebar - fixed full height */
 .sidebar {
-    height: 100%;
-    width: 180px;
+    height: 150%;
+    width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -9,15 +9,15 @@
     background-color: #111;
     overflow-x: hidden;
     padding-top: 16px;
-    margin-top: 15%;
-    padding-top: 10%;
+    margin-top: 5%;
+    padding-top: 6%;
   }
   
   /* Style sidebar links */
   .sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16.5px;
     color: #818181;
     display: block;
     padding-top: 30px;

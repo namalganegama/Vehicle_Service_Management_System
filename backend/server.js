@@ -48,9 +48,21 @@ app.use("/feedback", require("./routes/service-list-manager/feedback-route"));
 app.use("/employee", require("./routes/employee-manager/EmployeeRoute"));
 app.use("/attendant", require("./routes/employee-manager/AttendentSheetRoute"));
 
+// Apoinment manager routes 
+app.use("/apoinment", require("./routes/apoinment-manager/ApoinmentRoute"));
+
+// Order manager routes 
+app.use("/order", require("./routes/order-manager/OrderRoute"));
+
+// Stock manager routes 
+app.use("/stock", require("./routes/stock-manager/StockRoute"));
+
+// Salary manager routes 
+app.use("/salary", require("./routes/salary-manager/SalaryRoute"));
 
 
+// Billing manager routes
+app.use("/bill", require("./routes/billing-manager/BillingRoute"));
 
-
-
-
+// Financial manager routes
+app.use("/payment", require("./routes/financial-manager/FinancialRoute"));
