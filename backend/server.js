@@ -5,7 +5,7 @@ const cors = require("cors")
 const dotenv = require("dotenv");
 require("dotenv").config();
 
-/*---------------------------------------Set Up Server-------------------------------------------*/
+/*Set Up Server*/
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
@@ -21,7 +21,7 @@ app.listen(PORT,()=>{
 
 
 
-/*---------------------------------------connect to mongoDB-------------------------------------------*/
+/*connect to mongoDB*/
     //Type 01
 const URL= process.env.MONGO_CONNECT;
 
@@ -36,7 +36,7 @@ connection.once("open", ()=>{
     console.log("connection success")
 })
 
-/*---------------------------------------Create Routes-------------------------------------------*/
+/*Create Routes*/
 
 // Service list mannager routes
 app.use("/repair", require("./routes/service-list-manager/repair-details-route"));
